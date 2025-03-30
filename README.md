@@ -9,21 +9,21 @@ docker exec -it -w /opt/kafka/bin broker sh
 ### Topic Management
 - List Topics
 ```shell
-kakfa-topics.sh --bootstrap-server localhost:9092 --list
+kafka-topics.sh --bootstrap-server localhost:9092 --list
 ```
 - Create a topic
 ```shell
-kakfa-topics.sh --bootstrap-server localhost:9092 --create --topic my-topic --partitions 3 --replication-factor 2
+kafka-topics.sh --bootstrap-server localhost:9092 --create --topic my-topic --partitions 3 --replication-factor 2
 ```
 - Delete a topic
 ```shell
-kakfa-topics.sh --bootstrap-server localhost:9092 --delete --topic my-topic
+kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic my-topic
 ```
 
 ### Producers
 - Send Message
 ```shell
-kakfa-console-producer.sh --bootstrap-server localhost:9092 --topic my-topic
+kafka-console-producer.sh --bootstrap-server localhost:9092 --topic my-topic
 # Type a message then press enter
 ```
 - Send message with a key
